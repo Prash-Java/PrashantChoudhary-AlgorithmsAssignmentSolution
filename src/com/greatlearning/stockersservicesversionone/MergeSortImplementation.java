@@ -131,6 +131,7 @@ public class MergeSortImplementation {
         }
     }
 
+    //Basic method to display the array
     public void displayCompanyStockPrices(double[] stockPrices){
         for(int i=0;i<stockPrices.length;i++){
             System.out.print(stockPrices[i] + " ");
