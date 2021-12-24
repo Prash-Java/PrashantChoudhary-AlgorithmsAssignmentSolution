@@ -1,6 +1,5 @@
 package com.greatlearning.stockersdriverversionone;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import com.greatlearning.stockersservicesversionone.BinarySearchImplementation;

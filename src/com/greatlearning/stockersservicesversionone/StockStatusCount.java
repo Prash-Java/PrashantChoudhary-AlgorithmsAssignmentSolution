@@ -1,7 +1,5 @@
 package com.greatlearning.stockersservicesversionone;
 
-import java.util.Arrays;
-
 //Class for keeping stock of companies for their rising or declining stock values as compared to yesterday
 public class StockStatusCount {
 	//Basic counters to store count for rising/declining stock values
