@@ -9,6 +9,8 @@ import com.greatlearning.stockersservicesversionone.StockStatusCount;
 //This Is Driver Class That Controls The Application Logic
 public class StockersDriver {
 	//Scanner Class, its object will be required to take input from users on console
+	//Not created any modal class because we have only two arrays in this requirement, and i have gone with private data members
+	//Not used Getter & Setters here or in service package classes, because even though data members are private, i use it within same class for data access
 	public static Scanner sc = new Scanner(System.in);
 	//Data Members, Arrays of types double and boolean to hold stock prices and stock status of company, scope is global within this class, so its data members at class level
 	private static double[] stockPrices;
