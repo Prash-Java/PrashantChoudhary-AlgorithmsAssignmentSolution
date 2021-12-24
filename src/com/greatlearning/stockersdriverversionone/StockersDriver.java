@@ -2,9 +2,9 @@ package com.greatlearning.stockersdriverversionone;
 
 import java.util.Scanner;
 
-import com.greatlearning.stockersservicesversiontwo.BinarySearchImplementation;
-import com.greatlearning.stockersservicesversiontwo.MergeSortImplementation;
-import com.greatlearning.stockersservicesversiontwo.StockStatusCount;
+import com.greatlearning.stockersservicesversionone.BinarySearchImplementation;
+import com.greatlearning.stockersservicesversionone.MergeSortImplementation;
+import com.greatlearning.stockersservicesversionone.StockStatusCount;
 
 public class StockersDriver {
     public static Scanner sc = new Scanner(System.in);

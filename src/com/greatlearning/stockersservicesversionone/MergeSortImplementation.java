@@ -1,4 +1,4 @@
-package com.greatlearning.stockersservicesversiontwo;
+package com.greatlearning.stockersservicesversionone;
 
 public class MergeSortImplementation {
     /*This method is belonging to service package and helps to sort an array, and in this case in descending order,

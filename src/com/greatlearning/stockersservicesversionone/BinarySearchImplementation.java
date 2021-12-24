@@ -1,4 +1,4 @@
-package com.greatlearning.stockersservicesversiontwo;
+package com.greatlearning.stockersservicesversionone;
 
 public class BinarySearchImplementation {
     public void performBinarySearch(double[] stockPrices, int first, int last, double key) {
