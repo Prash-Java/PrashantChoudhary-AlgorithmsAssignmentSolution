@@ -1,7 +1,6 @@
 package com.greatlearning.stockersdriverversionone;
-
+//Imported Pre-built Libraries Jar Files
 import java.util.Scanner;
-
 import com.greatlearning.stockersservicesversionone.BinarySearchImplementation;
 import com.greatlearning.stockersservicesversionone.MergeSortImplementation;
 import com.greatlearning.stockersservicesversionone.StockStatusCount;
@@ -12,15 +11,17 @@ public class StockersDriver {
 	//Not created any modal class because we have only two arrays in this requirement, and i have gone with private data members
 	/*Not used Getter & Setters here or in service package classes, because even though data members are private, i use it within same class
 	for data access*/
-	/*Have used Service package to classify different classes based on distinct functionalities of problem statement, one service class can also
-	  serve the purpose, but that might not look like clean code and all methods at same place might be complicated in appearance*/
+	/*Have used Service package to classify different classes based on distinct functionalities of problem statement like sorting and then
+	  searching, one service class can also serve the purpose, but that might not look like clean code and all methods at same place might be
+	  complicated in appearance*/
+
 	public static Scanner sc = new Scanner(System.in);
 	//Data Members, Arrays of types double and boolean to hold stock prices and stock status of company, scope is global within this class, so its data members at class level
 	private static double[] stockPrices;
 	private static boolean[] stockStatus;
 	//boolean variable with scope global within this class and another int variable to hold user input which scope will be global but within this class
 	private static boolean flag = true;
-	private static int choice;
+	public static int choice;
 	//Service Package Classes are instantiated and referenced with their created object, using default constructors
 	private static MergeSortImplementation mergeSortImplementation = new MergeSortImplementation();
 	private static BinarySearchImplementation binarySearchImplementation = new BinarySearchImplementation();
@@ -92,7 +93,7 @@ public class StockersDriver {
 					break;
 				default:
 					//default case added in case if user selects any incorrect choice
-					System.out.println("Enter Values Between 0 and 5");
+					System.out.println("Enter Integral Values Between 0 and 6");
 					break;
 				}
 			}
