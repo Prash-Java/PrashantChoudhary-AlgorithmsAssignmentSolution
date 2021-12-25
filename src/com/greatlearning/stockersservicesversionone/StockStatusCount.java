@@ -5,12 +5,11 @@ public class StockStatusCount {
 	//Basic counters to store count for rising/declining stock values
 	private int trueCount = 0;
 	private int falseCount = 0;
-
 	//Method for taking count on rising stock values of Companies and taking their count
 	public int countCompanyWithRisingStockStatus(boolean[] stockStatus){
 		for(int i=0;i<stockStatus.length;i++) {
 			if (stockStatus[i] == true) {
-				++trueCount;
+				trueCount++;
 			}
 		}
 		return trueCount;
