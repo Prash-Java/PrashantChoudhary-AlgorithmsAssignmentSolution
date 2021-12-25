@@ -10,7 +10,10 @@ import com.greatlearning.stockersservicesversionone.StockStatusCount;
 public class StockersDriver {
 	//Scanner Class, its object will be required to take input from users on console
 	//Not created any modal class because we have only two arrays in this requirement, and i have gone with private data members
-	//Not used Getter & Setters here or in service package classes, because even though data members are private, i use it within same class for data access
+	/*Not used Getter & Setters here or in service package classes, because even though data members are private, i use it within same class
+	for data access*/
+	/*Have used Service package to classify different classes based on distinct functionalities of problem statement, one service class can also
+	  serve the purpose, but that might not look like clean code and all methods at same place might be complicated in appearance*/
 	public static Scanner sc = new Scanner(System.in);
 	//Data Members, Arrays of types double and boolean to hold stock prices and stock status of company, scope is global within this class, so its data members at class level
 	private static double[] stockPrices;
@@ -57,9 +60,13 @@ public class StockersDriver {
 					mergeSortImplementation.displayCompanyStockPrices(stockPrices);
 					break;
 				case 2:
-					//It will arrange Stock Prices In Descending Order For User Using Merge Sort
+					/*It will arrange Stock Prices In Descending Order For User Using Merge Sort, if array is sorted in ascending order once,
+					in that case we can reverse this array and achieve descending order without using Merge Sort, but using Merge Sort here as 
+					User can directly select option2 without selecting option1, in which case array may or may not be sorted in ascending order*/
 					System.out.println("Stock prices in descending order are :");
 					mergeSortImplementation.sortInDescendingOrder(stockPrices,0,stockPrices.length-1);
+					/*As per problem requirement, display method is used in Merge Sort Service Class as we are using display to print sorted
+					 Arrays and so have placed in that service class and have not created separate service class*/
 					mergeSortImplementation.displayCompanyStockPrices(stockPrices);
 					break;
 				case 3:
