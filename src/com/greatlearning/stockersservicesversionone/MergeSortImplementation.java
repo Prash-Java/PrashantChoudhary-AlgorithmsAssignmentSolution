@@ -111,7 +111,7 @@ public class MergeSortImplementation {
 			sortInDescendingOrder(stockPrices, left, mid);
 			sortInDescendingOrder(stockPrices, mid + 1, right);
 
-			// Merge the sorted halves based on ascending or descending order
+			// Merge the sorted halves based on descending order
 			mergeForDescendingOrder(stockPrices, left, mid, right);
 		}
 	}
@@ -126,7 +126,7 @@ public class MergeSortImplementation {
 			sortInAscendingOrder(stockPrices, left, mid);
 			sortInAscendingOrder(stockPrices, mid + 1, right);
 
-			// Merge the sorted halves based on ascending or descending order
+			// Merge the sorted halves based on ascending order
 			mergeForAscendingOrder(stockPrices, left, mid, right);
 		}
 	}
