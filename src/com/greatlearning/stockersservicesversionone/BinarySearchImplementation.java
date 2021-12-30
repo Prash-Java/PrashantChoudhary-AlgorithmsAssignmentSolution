@@ -21,7 +21,7 @@ public class BinarySearchImplementation {
 			}
 			mid = (first + last)/2;
 		}
-		//Exit Criteria In Case Element Is Not Available
+		//Criteria In Case Element Is Not Available
 		if(first>last) {
 			System.out.println("Value not found");
 		}

@@ -4,7 +4,7 @@ import com.greatlearning.stockersdriverversionone.StockersDriver;
 public class MergeSortImplementation {
 	StockersDriver stockersDriver = new StockersDriver();
 	/*This method is belonging to service package and helps to sort an array using Merge Sort With Worst Case Time Complexity Of O(nlogn),
-	 *  and in this case in any specified order using choice flag,
+	 * and in this case in any specified order using choice flag,
     This Uses Divide & Conquer Approach Of Merge Sort */
 	public void performMergeSort(double[] stockPrices, int left, int mid, int right) {
 		// Find sizes of two sub arrays to be merged
@@ -74,7 +74,9 @@ public class MergeSortImplementation {
 	}
 
 
-	// Main function that sorts array[left...right] using merge() in Specified Order
+	/* Main function that sorts array[left...right] using merge() in Specified Order, Merge Sort is Divide & Conquer Algorithm, so irrespective
+	 * of Ascending or Descending Order, This Divide Approach of Algorithm will first make sure that every single element is segregated in
+	 * array in sorted order, and only after this method below, merge & conquer process will take place, so performMergeSort() method is caled */
 	public void performSorting(double[] stockPrices, int left, int right) {
 		if (left < right) {
 			// Find the middle point
@@ -101,7 +103,7 @@ public class MergeSortImplementation {
 	/*AS WE CAN SEE BELOW COMMENTED CODE, WHICH IS FOR MERGE SORT IN DESCENDING ORDER,so to avoid this much almost redundant code, we controlled
 	using Flag value and incorporated Merge Sort in Ascending Order or Descending Order With Same Single Code Snippet as our PROBLEM STATEMENT
 	requires only one case mandatorily for Descending Order*/
-
+	//In case if we want to keep Merge Sort Methods as separate, we can very well use below code snippet and can classify these on sorting order
 
 	/*This method is belonging to service package and helps to sort an array, and in this case in descending order,
     This Uses Divide & Conquer Approach Of Merge Sort */
