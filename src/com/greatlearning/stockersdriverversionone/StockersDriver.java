@@ -21,7 +21,7 @@ public class StockersDriver {
 	private static boolean[] stockStatus;
 	//boolean variable with scope global within this class and another int variable to hold user input which scope will be global but within this class
 	private static boolean flag = true;
-	public static int choice;
+	private static int choice;
 	//Service Package Classes are instantiated and referenced with their created object, using default constructors
 	private static MergeSortImplementation mergeSortImplementation = new MergeSortImplementation();
 	private static BinarySearchImplementation binarySearchImplementation = new BinarySearchImplementation();
@@ -60,7 +60,7 @@ public class StockersDriver {
 					case 1:
 						//It will arrange Stock Prices In Ascending Order For User Using Merge Sort
 						System.out.println("Stock prices in ascending order are :");
-						mergeSortImplementation.sortInAscendingOrder(stockPrices,0,stockPrices.length-1);
+						mergeSortImplementation.performSorting(stockPrices,0,stockPrices.length-1);
 						mergeSortImplementation.displayCompanyStockPrices(stockPrices);
 						break;
 					case 2:
@@ -68,7 +68,7 @@ public class StockersDriver {
 					in that case we can reverse this array and achieve descending order without using Merge Sort, but using Merge Sort here as 
 					User can directly select option2 without selecting option1, in which case array may or may not be sorted in ascending order*/
 						System.out.println("Stock prices in descending order are :");
-						mergeSortImplementation.sortInDescendingOrder(stockPrices,0,stockPrices.length-1);
+						mergeSortImplementation.performSorting(stockPrices,0,stockPrices.length-1);
 						/*As per problem requirement, display method is used in Merge Sort Service Class as we are using display to print sorted
 					 Arrays and so have placed in that service class and have not created separate service class*/
 						mergeSortImplementation.displayCompanyStockPrices(stockPrices);
@@ -85,7 +85,7 @@ public class StockersDriver {
 						//It will prompt user to search a specific stock prices value if exists, it will sort Stock Prices Array in ascending order and then perform Binary Search for key
 						System.out.println("enter the key value");
 						double key = sc.nextDouble();
-						mergeSortImplementation.sortInAscendingOrder(stockPrices,0,stockPrices.length-1);
+						mergeSortImplementation.performSorting(stockPrices,0,stockPrices.length-1);
 						binarySearchImplementation.performBinarySearch(stockPrices,0,stockPrices.length-1,key);
 						break;
 						//If user selects 6 or 0, in either case, it will exit the application
@@ -110,6 +110,14 @@ public class StockersDriver {
 			ex.printStackTrace();
 		}
 		//finally block to close scanner resource is not provided explicitly as Try with Resource is used and it will take care of closing resource
+	}
+	/*Getter Method To Access Current Value Of choice identifier as this is private to this Class
+	 * Main Purpose of this is to make use of choice as flag, so that we can handle both ascending order and descending order sorting using 
+	 * Merge Sort with non-duplicate code/method, based on this flag value, it will perform ascending order sorting or descending order sorting,
+	 * the same is used in MergeSortImplementation Service Class, so as to avoid code redundancy
+	 */
+	public static int getChoice() {
+		return choice;
 	}
 }
 
