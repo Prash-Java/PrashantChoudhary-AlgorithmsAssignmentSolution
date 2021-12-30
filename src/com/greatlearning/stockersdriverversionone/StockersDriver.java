@@ -15,8 +15,8 @@ public class StockersDriver {
 	  searching, one service class can also serve the purpose, but that might not look like clean code and all methods at same place might be
 	  complicated in appearance*/
 
-	//	public static Scanner sc = new Scanner(System.in);
-	//Data Members, Arrays of types double and boolean to hold stock prices and stock status of company, scope is global within this class, so its data members at class level
+	/*Data Members, Arrays of types double and boolean to hold stock prices and stock status of company, scope is global within this class,
+	so its data members at class level */
 	private static double[] stockPrices;
 	private static boolean[] stockStatus;
 	//boolean variable with scope global within this class and another int variable to hold user input which scope will be global but within this class
