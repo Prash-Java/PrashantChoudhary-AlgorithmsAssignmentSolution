@@ -30,8 +30,8 @@ public class StockersDriver {
 	//Execution starting point from this main method
 	public static void main(String[] args){
 		//User would be asked to enter details like number of companies as integer, their current stock prices as double and their stock status as boolean
-		//Try With Resource Block Where We Have Initialized Scanner Resource and created an object for dealing with UNCHECKED EXCEPTIONS
-		//Our Logic Expects Exception Can Happen Due To Arithmetic Exceptions Or Array Index Out Of Bounds Exception
+		//Try With Resource Block Where We Have Initialized Scanner Resource and created an object for dealing with Runtime Exceptions
+		//We might Expect Exception Can Happen Due To Arithmetic Exceptions Or Array Index Out Of Bounds Exception
 		try(Scanner sc = new Scanner(System.in)){
 			System.out.println("enter the no of companies");
 			int numberOfCompanies = sc.nextInt();
