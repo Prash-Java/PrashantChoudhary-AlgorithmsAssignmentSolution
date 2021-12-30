@@ -47,6 +47,8 @@ public class StockersDriver {
 				}
 				//This Logic Will Prompt User To Enter a set of functionalities available, if it selects 0, it will exit this application 
 				while(flag){
+					System.out.println();
+					System.out.println("----------------------------------------------");
 					System.out.println("Enter the operation that you want to perform");
 					System.out.println("1. Display the companies stock prices in ascending order");
 					System.out.println("2. Display the companies stock prices in descending order");
@@ -54,6 +56,7 @@ public class StockersDriver {
 					System.out.println("4. Display the total no of companies for which stock prices declined today");
 					System.out.println("5. Search a specific stock price");
 					System.out.println("6. press 0 to exit");
+					System.out.println("----------------------------------------------");
 					//User will be prompt to select the functionality
 					choice = sc.nextInt();
 					switch(choice){
@@ -88,15 +91,14 @@ public class StockersDriver {
 						mergeSortImplementation.performSorting(stockPrices,0,stockPrices.length-1);
 						binarySearchImplementation.performBinarySearch(stockPrices,0,stockPrices.length-1,key);
 						break;
-						//If user selects 6 or 0, in either case, it will exit the application
-					case 6:
+						//If user selects 0, in this case, it will exit the application
 					case 0:
 						System.out.println("Exited successfully");
 						flag = false;
 						break;
 					default:
-						//default case added in case if user selects any incorrect choice
-						System.out.println("Enter Integral Values Between 0 and 6");
+						//default case added in case if user selects any value less than 0 or greater than 5
+						System.out.println("Enter Integral Values Between 0 and 5");
 						break;
 					}
 				}
