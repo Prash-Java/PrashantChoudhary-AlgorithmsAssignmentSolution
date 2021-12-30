@@ -3,7 +3,8 @@ package com.greatlearning.stockersservicesversionone;
 import com.greatlearning.stockersdriverversionone.StockersDriver;
 public class MergeSortImplementation {
 	StockersDriver stockersDriver = new StockersDriver();
-	/*This method is belonging to service package and helps to sort an array, and in this case in ascending order,
+	/*This method is belonging to service package and helps to sort an array using Merge Sort With Worst Case Time Complexity Of O(nlogn),
+	 *  and in this case in any specified order using choice flag,
     This Uses Divide & Conquer Approach Of Merge Sort */
 	public void performMergeSort(double[] stockPrices, int left, int mid, int right) {
 		// Find sizes of two sub arrays to be merged
@@ -95,8 +96,8 @@ public class MergeSortImplementation {
 		}
 		System.out.println();
 	}
-	
-	
+
+
 	/*AS WE CAN SEE BELOW COMMENTED CODE, WHICH IS FOR MERGE SORT IN DESCENDING ORDER,so to avoid this much almost redundant code, we controlled
 	using Flag value and incorporated Merge Sort in Ascending Order or Descending Order With Same Single Code Snippet as our PROBLEM STATEMENT
 	requires only one case mandatorily for Descending Order*/
